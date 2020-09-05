@@ -1,0 +1,1 @@
+export PATH=$HOME/bin:$GOPATH/bin:/usr/local/bin:/usr/local/aws/bin:$PATH

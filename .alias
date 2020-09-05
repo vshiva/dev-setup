@@ -1,0 +1,19 @@
+alias upsync='git fetch upstream && git checkout master && git merge upstream/master && git push'
+alias tf=terraform
+
+alias cert='openssl x509 -text -noout -in'
+alias loop='function _loop(){ while true; do "$@" ; done};_loop'
+
+##
+# Kubernetes
+##
+
+alias ka='function _ka(){ kubectl "$@" --all-namespaces; };_ka'
+alias km='kubectl -n monitoring '
+alias ks='kubectl -n kube-system '
+alias ksvc="kubectl get --all-namespaces svc -o json | jq -r '.items[] | [.metadata.name,([.spec.ports[].nodePort | tostring ] | join(\"|\"))] | @csv'"
+# shortcuts for frequent kubernetes commands
+alias kpods="kubectl get po"
+alias kinspect="kubectl describe"
+alias gpls="ps aux | grep gopls |  grep -v grep | awk '{print \$2}'"
+alias gpkill="gpls | xargs kill -9"

@@ -1,0 +1,1 @@
+export cdpath=(. $HOME/work $HOME/work/go/src/github.com )
