@@ -16,3 +16,6 @@ alias kpods="kubectl get po"
 alias kinspect="kubectl describe"
 alias gpls="ps aux | grep gopls |  grep -v grep | awk '{print \$2}'"
 alias gpkill="gpls | xargs kill -9"
+
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
